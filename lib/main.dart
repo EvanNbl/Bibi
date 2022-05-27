@@ -61,26 +61,37 @@ class _MyHomePageState extends State<MyHomePage> {
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
     return Scaffold(
-      backgroundColor: Colors.grey,
-      body: Center(
-        child: Container(
-            color: Colors.white,
-            width: 300,
-            height: 150,
-            child: new Image.asset(
-              'images/logo.png',
-              width: 120,
-              height: 120,
-            ),
-            alignment: Alignment.centerLeft),
-        // child: Text(
-        //   'bibi',
-        // ),
-        // child: Text(
-        //   'Lorem impsum dolor sit amet, consectetur adipiscing elit.',
-        // ),
-        // alignment: Alignment.center),
-      ),
-    );
+        backgroundColor: Colors.grey,
+        body: Center(
+          child: Container(
+              color: Colors.white,
+              width: 300,
+              height: 150,
+              alignment: Alignment.centerLeft,
+              child: Row(
+                children: [
+                  Image.asset(
+                    'images/logo.png',
+                    width: 120,
+                    height: 120,
+                  ),
+                  Column(children: [
+                    Text(
+                      "bibi",
+                      style: TextStyle(color: Colors.blue, fontSize: 20),
+                    ),
+                    Text(
+                        "Lorem impsum dolor sit amet, consectetur adipiscing elit.")
+                  ])
+                ],
+              )
+
+              // child:
+              // child: Text(
+              //   'Lorem impsum dolor sit amet, consectetur adipiscing elit.',
+              // ),
+              // alignment: Alignment.center),
+              ),
+        ));
   }
 }
